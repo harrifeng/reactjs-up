@@ -11,7 +11,11 @@
         <script>
          // my app's code
          React.render(
-             React.DOM.h1(null, "Hello world!"),
+             React.DOM.h1(
+                 {
+                     id: "my-heading"
+                 },
+                 "Hello world!"),
              document.getElementById("app")
          );
         </script>
