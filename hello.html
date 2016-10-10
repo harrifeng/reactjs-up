@@ -10,6 +10,9 @@
         <script src="react/build/react.js"></script>
         <script>
          var Component = React.createClass({
+             propTypes: {
+                 name: React.PropTypes.string.isRequired
+             },
              render :function() {
                  return React.DOM.span(null, "My name is " + this.props.name);
              }
@@ -17,7 +20,7 @@
          // my app's code
          React.render(
              React.createElement(Component, {
-                 name: "Bob"
+                 // name: "Bob"
              }),
              document.getElementById("app")
          );
